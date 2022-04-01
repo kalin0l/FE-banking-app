@@ -1,0 +1,45 @@
+form {
+    z-index: 0;
+    margin: 80px auto;
+    max-width: 360px;
+}
+form label {
+    display: block;
+    margin: 30px auto;
+}
+
+form span {
+    display: block;
+}
+
+form input {
+    padding: 8px 6px;
+    font-size: 1em;
+    color: #777;
+    width: 100%;
+}
+.btn {
+    background: transparent;
+    color: lime;
+    font-weight: bold;
+    border: 2px solid lime;
+    border-radius: 3px;
+    padding: 10px 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.btn:hover {
+    background-color: lime;
+    color: white;
+}
+.invalid {
+    border: orange 0.5px solid;
+}
+.error {
+    color: orangered;
+}
+.forgot-pw {
+    margin-top: 10px;
+    color: #777;
+    text-decoration: none;
+}

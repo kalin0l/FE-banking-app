@@ -1,0 +1,171 @@
+body {
+    overflow: hidden;
+}
+.section {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+}
+.balance-container {
+    position: fixed;
+
+    color: black;
+    display: flex;
+    justify-content: space-between;
+}
+.transaction-section {
+    background-color: #f3f3f3;
+    position: fixed;
+    top: 25%;
+    left: 15%;
+    width: 35%;
+    height: 63%;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+.date-container {
+    position: fixed;
+    left: 15%;
+    top: 15%;
+}
+
+.money-container {
+    position: fixed;
+    top: 20%;
+    right: 20%;
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+.deposit-container {
+    position: fixed;
+    top: 25%;
+    right: 20%;
+    background-image: linear-gradient(to top left, #39b385, #9be15d);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 26.7%;
+}
+.deposit-container h4,
+.transfer-container h4 {
+    margin-left: 1rem;
+}
+.deposit-container span {
+    margin-left: 1rem;
+    font-weight: bold;
+}
+.transfer-container .transfer {
+    display: flex;
+    margin-left: 0.3rem;
+    padding-left: 1rem;
+    font-weight: bold;
+}
+.transfer-container .transfer .amount {
+    margin-left: 1rem;
+}
+
+.deposit-container button,
+.transfer-container button {
+    padding: 10px 8px;
+    border-radius: 5px;
+    margin-left: 5px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+.deposit-input {
+    padding: 10px 8px;
+    font-size: 1em;
+    color: #777;
+    width: 40%;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    margin-left: 1rem;
+}
+.transfer-container input {
+    padding: 10px 8px;
+    font-size: 1em;
+    color: #777;
+    width: 20%;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    margin-left: 1rem;
+}
+.transfer-container {
+    position: fixed;
+    top: 60%;
+    right: 20%;
+    background-image: linear-gradient(to top left, #ffb003, #ffcb03);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 26.7%;
+}
+.details {
+    width: 50%;
+    position: fixed;
+    bottom: 5rem;
+    left: 7.5%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.income span,
+.out span {
+    margin-right: 0.25rem;
+}
+.income .in {
+    color: #66c873;
+    font-size: 20px;
+}
+.out .taken {
+    font-size: 20px;
+    color: red;
+}
+.details button {
+    background-color: transparent;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+.all-users {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f3f3f3;
+    position: fixed;
+    right: 5%;
+    top: 25%;
+    border-radius: 5px;
+    overflow: auto;
+}
+.all-users ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+.all-users ul li {
+    margin-bottom: 15px;
+    background-color: #ffcb03;
+    border-radius: 5px;
+    padding: 8px;
+}
+.online {
+    height: 10px;
+    width: 10px;
+    background-color: green;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
