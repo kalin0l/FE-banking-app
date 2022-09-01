@@ -5,7 +5,7 @@ export const registerUsers = (name, email, password, confirmPassword) => {
   return async (dispatch) => {
     try {
       dispatch(FormActions.setLoading());
-      const res = await fetch("http://localhost:5000/api/users/registration", {
+      const res = await fetch("https://react-bank-app-mern.herokuapp.com/api/users/registration", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -39,7 +39,7 @@ export const loginUsers = (email, password) => {
   return async (dispatch) => {
     try {
       dispatch(FormActions.setLoading());
-      const res = await fetch("http://localhost:5000/api/users/login", {
+      const res = await fetch("https://react-bank-app-mern.herokuapp.com/api/users/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -71,7 +71,7 @@ export const getUsers = () => {
   return async (dispatch) => {
     try {
       dispatch(FormActions.setLoading());
-      const res = await fetch("http://localhost:5000/api/users/");
+      const res = await fetch("https://react-bank-app-mern.herokuapp.com/api/users/");
       const data = await res.json();
       if (!res.ok) {
         throw new Error(data.message);
@@ -90,7 +90,7 @@ export const getAllMovements = (id) => {
   return async (dispatch) => {
     try {
       dispatch(FormActions.setLoading());
-      const res = await fetch(`http://localhost:5000/api/users/${id}`);
+      const res = await fetch(`https://react-bank-app-mern.herokuapp.com/api/users/${id}`);
       const data = await res.json();
       if (!res.ok) {
         throw new Error(data.message);
@@ -108,7 +108,7 @@ export const createMov = (mov = 0, time, withdraws = 0, id) => {
   return async (dispatch) => {
     try {
       dispatch(FormActions.setLoading());
-      const res = await fetch("http://localhost:5000/api/users/", {
+      const res = await fetch("https://react-bank-app-mern.herokuapp.com/api/users/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -138,7 +138,7 @@ export const forgotPass = (email) => {
     try {
       dispatch(FormActions.setLoading());
       const res = await fetch(
-        "http://localhost:5000/api/users/forgotPassword",
+        "https://react-bank-app-mern.herokuapp.com/api/users/forgotPassword",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -166,7 +166,7 @@ export const resetPassword = (token, pass, confirmPass) => {
     try {
       dispatch(FormActions.setLoading());
       const res = await fetch(
-        `http://localhost:5000/api/users/resetPassword/${token}`,
+        `https://react-bank-app-mern.herokuapp.com/api/users/resetPassword/${token}`,
         {
           method: "PATCH",
           headers: { "Content-Type": "application/json"},
@@ -196,7 +196,7 @@ export const updatePass = (token, currentPassword, password, newPassword) => {
   return async (dispatch) => {
     console.log(token);
     try {
-      const res = await fetch(`http://localhost:5000/api/users/`,
+      const res = await fetch(`https://react-bank-app-mern.herokuapp.com/api/users/`,
       {
         method: "PATCH",
         headers: { "Content-Type": "application/json",Authorization: 'Bearer ' + token  },

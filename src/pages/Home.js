@@ -18,7 +18,7 @@ const Home = () => {
   const year = now.getFullYear();
   const hour = now.getHours();
   const min = now.getMinutes();
-  const timeOfMov = `${day}/${month}/${year} ${hour}:${min}`;
+  const timeOfMov = `${day}/${month+1}/${year} ${hour}:${min < 10 ? '0' + min:min}`;
 
   const user = useSelector((state) => state.form.user);
   const movements = useSelector((state) => state.users.movements);

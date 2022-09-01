@@ -3,10 +3,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { UserSliceActions } from "../store/Users-slice";
 import { updatePass } from "../store/PostReq";
 import useForm from "../hooks/useForm";
+import { useState } from "react";
 
 const ResetPasswordModal = () => {
   const password = useSelector((state) => state.form.password);
   const token = useSelector((state) => state.form.token);
+
+  
 
   const {
     input: currentPassword,
@@ -39,6 +42,8 @@ const ResetPasswordModal = () => {
   };
   const dispatch = useDispatch();
 
+  
+
   return (
     <section className="reset-password-container">
       <div>
@@ -64,17 +69,18 @@ const ResetPasswordModal = () => {
             onChange={curPassHandler}
           />
         </label>
-        {curPassError && <p className="error">wrong pass</p>}
+        {curPassError && <p className="error">Wrong pass</p>}
         <label>
           <span>New Password</span>
-          <input
+         <input
             type="password"
             value={newPass}
+            disabled={curPassError}
             onBlur={newPassTouchHandler}
             onChange={newPassHandler}
           />
         </label>
-        {newPassError && <p className="error">wrong pass</p>}
+        {newPassError && <p className="error">Wrong pass</p>}
         <label>
           <span>Confirm your new password</span>
           <input
@@ -84,7 +90,7 @@ const ResetPasswordModal = () => {
             onChange={confirmNewPassHandler}
           />
         </label>
-        {confirmNewPassError && <p className="error">wrong pass</p>}
+        {confirmNewPassError && <p className="error">Wrong pass</p>}
         <section className="form-btn-container">
           <button
             type="submit"
